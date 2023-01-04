@@ -1,0 +1,22 @@
+{
+    "videos":[
+        {
+            "id" : "1",
+            "name" : "teste1 filme sobre",
+            "path": "video1.mov",
+            "time" : "02:33:15"
+        },
+        {
+            "id" : "2",
+            "name" : "teste2 filme 3 aaa",
+            "path": "video2.mov",
+            "time" : "01:40:15"
+        },
+        {
+            "id" : "3",
+            "name" : "teste3 filme zzzzzzz",
+            "path": "video3.mp4",
+            "time" : "01:55:00"
+        }
+    ]
+}
