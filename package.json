@@ -2,6 +2,7 @@
   "name": "video-trimmer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://msawaguchi.github.io/video-list-trimmer",
   "dependencies": {
     "@ffmpeg/core": "^0.11.0",
     "@ffmpeg/ffmpeg": "^0.11.6",
@@ -21,6 +22,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
