@@ -117,6 +117,7 @@ const Home = () => {
   
           let blob = new Blob([data.buffer], { type: "image/png" });
           let dataURI = await helpers.readFileAsBase64(blob);
+          console.log(dataURI)
           ffmpeg.FS("unlink", `img${i}.png`);
           arrayOfImageURIs.push(dataURI);
         } catch (error) {
