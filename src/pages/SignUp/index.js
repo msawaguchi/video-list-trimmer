@@ -25,10 +25,6 @@ const SignUp = () => {
             email: Yup.string()
               .required('O e-mail é obrigatório')
               .email('Insira um e-mail válido'),
-            senha: Yup.string().min(
-              6,
-              'Sua senha deve possuir no mínimo 6 dígitos',
-            ),
           });
     
         if (!email | !senha | !cel | !nome) {
@@ -47,14 +43,6 @@ const SignUp = () => {
             return;
         }
 
-        const checkPassword = await schema.isValid({ senha }).then(result => {return result});
-
-        if (!checkPassword) {
-            toast.error("A senha precisa de no mínimo 6 caracteres!" , {
-                position: toast.POSITION.BOTTOM_RIGHT, 
-                theme: "colored",});
-            return;
-        }
 
         const res = signup(email, senha, cel, nome);
 
