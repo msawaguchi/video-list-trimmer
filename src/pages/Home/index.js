@@ -26,7 +26,10 @@ const Home = () => {
     const videoElement = useRef();
 
     const [trimmedVideoFile, setTrimmedVideoFile] = useState(null);
-    const [cropList, setCropList] = useState([]);
+
+    // JSON com os dados do corte, vídeo cortado e id do video que foi cortado
+    // a cada vez que o vídeo é cortado, é adicionado na lista abaixo "cropList"
+    const [cropList, setCropList] = useState([]); 
     const [trimIsProcessing, setTrimIsProcessing] = useState(false);
     const [videoMeta, setVideoMeta] = useState(null);
     const [rStart, setRstart] = useState(0); // 0%
@@ -117,7 +120,7 @@ const Home = () => {
   
           let blob = new Blob([data.buffer], { type: "image/png" });
           let dataURI = await helpers.readFileAsBase64(blob);
-          console.log(dataURI)
+
           ffmpeg.FS("unlink", `img${i}.png`);
           arrayOfImageURIs.push(dataURI);
         } catch (error) {
