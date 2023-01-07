@@ -38,10 +38,19 @@ const SignUp = () => {
             return;
         } 
 
-        const checkEmail = await schema.isValid({ email, senha }).then(result => {return result});
+        const checkEmail = await schema.isValid({ email}).then(result => {return result});
 
         if (!checkEmail) {
-            toast.error("Preencha os campos corretamente!" , {
+            toast.error("Preencha o e-mail corretamente!" , {
+                position: toast.POSITION.BOTTOM_RIGHT, 
+                theme: "colored",});
+            return;
+        }
+
+        const checkPassword = await schema.isValid({ senha }).then(result => {return result});
+
+        if (!checkPassword) {
+            toast.error("A senha precisa de no mínimo 6 caracteres!" , {
                 position: toast.POSITION.BOTTOM_RIGHT, 
                 theme: "colored",});
             return;
