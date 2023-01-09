@@ -64,7 +64,8 @@ const Home = () => {
       loadVideo();
       setTrimmedVideoFile(null);
     }
-
+    setRstart(0);
+    setRend(10);
     setCropList([]);
   }, [video])
 
