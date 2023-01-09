@@ -19,6 +19,7 @@ const SignUp = () => {
     const [cel, setCel] = useState();
     const [senha, setSenha] = useState();
     const [error, setError] = useState();
+    const [senhaConfirmar, setSenhaConfirmar] = useState();
 
     const  handleSignup = async () => {
         const schema = Yup.object().shape({
@@ -26,8 +27,15 @@ const SignUp = () => {
               .required('O e-mail é obrigatório')
               .email('Insira um e-mail válido'),
           });
+
+        if (senhaConfirmar !== senha) {
+            toast.error("Confirme a senha com valores iguais!" , {
+                position: toast.POSITION.BOTTOM_RIGHT, 
+                theme: "colored",});
+            return;
+        }
     
-        if (!email | !senha | !cel | !nome) {
+        if (!email | !senha | !cel | !nome | !senhaConfirmar) {
             toast.error("Preencha todos os campos!" , {
                 position: toast.POSITION.BOTTOM_RIGHT, 
                 theme: "colored",});
@@ -85,9 +93,15 @@ const SignUp = () => {
                 />
                 <Input
                     type="password"
-                    placeholder="******"
+                    placeholder="Senha"
                     value={senha}
                     onChange={(e) => [setSenha(e.target.value), setError("")]}
+                />
+                 <Input
+                    type="password"
+                    placeholder="Confirme a senha"
+                    value={senhaConfirmar}
+                    onChange={(e) => [setSenhaConfirmar(e.target.value), setError("")]}
                 />
                 <C.LabelError>{error}</C.LabelError>
                 <Button Text="Cadastrar" onClick={handleSignup} />
