@@ -15,7 +15,7 @@ You must have Node.js installed to run locally and have[Node.js](https://nodejs.
 
 Clone the repo
 
-### `git clone https://github.com/msawaguchi/video-trimmer.git`
+### `git clone https://github.com/msawaguchi/video-list-trimmer.git`
 
 Install dependencies
 
