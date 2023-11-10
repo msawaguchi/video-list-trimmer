@@ -1,7 +1,7 @@
 # :video_camera: Video Trimmer
 
 <p align="center">
-  <img src="src/assets/video-trimmer.gif">
+  <img src="src/assets/video-list-trimmer.gif">
 </p>
 
 -----
