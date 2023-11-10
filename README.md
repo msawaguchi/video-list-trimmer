@@ -1,30 +1,42 @@
-# Instalação
+# :video_camera: Video Trimmer
 
-Este projeto foi feito com CRA [Create React App](https://github.com/facebook/create-react-app).
-É necessário ter o Node.js instalado para rodar localmente e ter [Node.js](https://nodejs.org/en/download/) incluído no HOST.
+<p align="center">
+  <img src="src/assets/video-trimmer.gif">
+</p>
 
-## Como rodar
+-----
 
-Na pasta do projeto, é necessário instalar os pacotes npm com o comando:
+# Installing
+
+This project was made with CRA [Create React App](https://github.com/facebook/create-react-app).
+You must have Node.js installed to run locally and have[Node.js](https://nodejs.org/en/download/) included no HOST.
+
+## CHot to run
+
+Clone the repo
+
+### `git clone https://github.com/msawaguchi/video-trimmer.git`
+
+Install dependencies
 
 ### `npm intall`
 
-e para iniciar o projeto, é só rodar o comando:
+start application:
 
 ### `npm start`
 
-Depois é só acessar o endereço no navegador:
+Access:
 [http://localhost:3000](http://localhost:3000)
 
 
-## Para fazer o deploy
+## Deploy
 
-Com o seguinte comando:
+run:
 
 ### `npm run build`
 
-O Node.js fará uma versão para produção na pasta "/build"\
-Todos os itens dentro da pasta /build deverão ser lançados no HOST..
+Node.js will make a production release in the "/build"\ folder
+All items within the /build folder must be launched on the HOST.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!

@@ -70,45 +70,45 @@ const SignUp = () => {
 
     return (
         <C.Container>
-            <C.Label>Cadastrar uma nova conta</C.Label>
+            <C.Label>Register a new account</C.Label>
             <C.Content>
                 <Input
                     type="nome"
-                    placeholder="Digite o nome"
+                    placeholder="Name"
                     value={nome}
                     onChange={(e) => [setNome(e.target.value), setError("")]}
                 />
                 <Input
                     type="email"
-                    placeholder="Digite o e-mail"
+                    placeholder="E-mail"
                     value={email}
                     onChange={(e) => [setEmail(e.target.value), setError("")]}
                 />
                 <Input
                     type="text"
-                    placeholder="Celular"
+                    placeholder="Tel"
                     value={cel}
                     onChange={(e) => [setCel(e.target.value), setError("")]}
                     mask="(99) 99999-9999"
                 />
                 <Input
                     type="password"
-                    placeholder="Senha"
+                    placeholder="Password"
                     value={senha}
                     onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
                  <Input
                     type="password"
-                    placeholder="Confirme a senha"
+                    placeholder="Confirm password"
                     value={senhaConfirmar}
                     onChange={(e) => [setSenhaConfirmar(e.target.value), setError("")]}
                 />
                 <C.LabelError>{error}</C.LabelError>
-                <Button Text="Cadastrar" onClick={handleSignup} />
+                <Button Text="Sign up" onClick={handleSignup} />
                 <C.LabelSignup>
-                    Já tem uma conta?
+                    Already have an account?
                     <C.Strong>
-                        <Link to="/">&nbsp;Entre aqui</Link>
+                        <Link to="/">&nbsp;Login</Link>
                     </C.Strong>
                 </C.LabelSignup>
             </C.Content>

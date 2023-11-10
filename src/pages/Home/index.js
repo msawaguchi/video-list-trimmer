@@ -183,10 +183,10 @@ const Home = () => {
             <C.MenuBar> 
                 <div>
                     <C.WelcomeText>
-                        Olá, {user.nome ? user.nome : user.email}!
+                        Hey, {user.nome ? user.nome : user.email}!
                     </C.WelcomeText>  
                     <C.Strong onClick={() => [logout(), navigate("/")]}>
-                        Sair
+                        Logout
                     </C.Strong>     
                 </div>
             </C.MenuBar>
@@ -219,7 +219,7 @@ const Home = () => {
                       loading={thumbnailIsProcessing}
                       videoMeta={videoMeta}
                       control={
-                        <Button Text={trimIsProcessing ? "Processando..." : "Cortar"} onClick={handleTrim}></Button>
+                        <Button Text={trimIsProcessing ? "Processing..." : "Trim Video"} onClick={handleTrim}></Button>
                       }
                       thumbNails={thumbnails}
                     />

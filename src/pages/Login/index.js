@@ -17,7 +17,7 @@ const Login = () => {
 
     const handleLogin = () => {
         if (!email | !senha) {
-            toast.error("Preencha todos os campos!" , {
+            toast.error("Please fill all inputs!" , {
                 position: toast.POSITION.BOTTOM_RIGHT, 
                 theme: "colored",});
             return;
@@ -37,11 +37,11 @@ const Login = () => {
 
     return (
         <C.Container>
-            <C.Label>Entrar</C.Label>
+            <C.Label>Login</C.Label>
             <C.Content>
                 <Input
                     type="email"
-                    placeholder="Digite o e-mail"
+                    placeholder="e-mail"
                     value={email}
                     onChange={(e) => [setEmail(e.target.value), setError("")]}
                 />
@@ -54,9 +54,9 @@ const Login = () => {
                 <C.LabelError>{error}</C.LabelError>
                 <Button Text="Entrar" onClick={handleLogin} />
                 <C.LabelSignup>
-                    Ainda não tem uma conta?
+                    Doesn't have an account yet?
                     <C.Strong>
-                        <Link to="/signup">&nbsp;Cadastre-se aqui</Link>
+                        <Link to="/signup">&nbsp;Sign up here!</Link>
                     </C.Strong>
                 </C.LabelSignup>
             </C.Content>
